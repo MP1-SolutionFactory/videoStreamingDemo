@@ -11,7 +11,6 @@ if [ $BOARD == "rx" ]; then
 	cp add_in_demo_launcher/005-eth_streaming_rx.yaml $DEMO_APP_PATH
 elif [ $BOARD == "tx" ]; then
 	echo "setting up tx yaml"
-	patch -u $DEMO_LAUNCHER_PATH/demo_launcher.py -i add_in_demo_launcher/demo_launcher_py.patch
 	cp add_in_demo_launcher/005-eth_streaming_tx.yaml $DEMO_APP_PATH
 else
 	echo "$BOARD is not a correct argument entry"
@@ -20,5 +19,5 @@ fi
 
 killall demo_launcher.py
 rm -rf /tmp/demo_launcher.lock
-sleep  2
+sleep  4
 $DEMO_LAUNCHER_PATH/demo_launcher.py &
