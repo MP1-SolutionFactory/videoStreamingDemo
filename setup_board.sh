@@ -8,7 +8,7 @@ fi
 BOARD=$1
 AR_FILE=$2
 
-wget https://github.com/manochavikas/stm32mp1_st60_demo/archive/$AR_FILE.zip
+wget https://github.com/MP1-SolutionFactory/videoStreamingDemo/archive/refs/tags/$AR_FILE.zip
 unzip -o $AR_FILE
 
 cd stm32mp1_st60_demo-*$AR_FILE
