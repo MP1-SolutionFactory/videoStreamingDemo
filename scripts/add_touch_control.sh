@@ -20,4 +20,5 @@ fi
 
 killall demo_launcher.py
 rm -rf /tmp/demo_launcher.lock
+sleep  2
 $DEMO_LAUNCHER_PATH/demo_launcher.py &
