@@ -16,8 +16,7 @@ else
 	echo "$BOARD is not a correct argument entry"
 	exit 2
 fi
-
-killall demo_launcher.py
 rm -rf /tmp/demo_launcher.lock
-sleep  4
+sleep 2
+killall demo_launcher.py
 $DEMO_LAUNCHER_PATH/demo_launcher.py &
