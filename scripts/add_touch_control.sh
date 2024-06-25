@@ -19,4 +19,5 @@ else
 fi
 
 killall demo_launcher.py
+rm -rf /tmp/demo_launcher.lock
 $DEMO_LAUNCHER_PATH/demo_launcher.py &
