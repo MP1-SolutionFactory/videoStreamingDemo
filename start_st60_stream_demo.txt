@@ -1,0 +1,5 @@
+tx board demo start:
+watch ./tx_stream.sh
+
+rx board demo start:
+./rx_stream.sh

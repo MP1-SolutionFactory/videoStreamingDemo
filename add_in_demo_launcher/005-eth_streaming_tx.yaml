@@ -1,0 +1,15 @@
+Application:
+    Name: Ethernet
+    Description: streaming tx
+    Icon: pictures/logo.png
+    Type: script
+    Board:
+        List: all
+    Script:
+        Start: application/eth_streaming/bin/tx_eth_stream.sh
+        Stop: application/eth_streaming/bin/stop_eth_streaming.sh
+    Action:
+        button_release_event: script_start
+        button_press_event: highlight_eventBox
+
+

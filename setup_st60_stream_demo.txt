@@ -1,0 +1,56 @@
+**************** One Time Procedure Start **************
+
+1. Ready two DK2 boards with standard linux release e.g. v1.2.
+Let's name:
+	- one board: tx board
+	- second board: rx board
+
+2. Connect the board to internet via ethernet & execute this instruction to download script on board:
+
+
+ST60_DEMO_TAG=ver1.0_rc5
+echo export ST60_DEMO_TAG=$ST60_DEMO_TAG > /etc/profile.d/st60_demo_profile.sh
+wget https://raw.githubusercontent.com/manochavikas/stm32mp1_st60_demo/$ST60_DEMO_TAG/scripts/setup_board.sh && chmod +x setup_board.sh
+
+tx board setup:
+==============
+
+./setup_board.sh tx $ST60_DEMO_TAG
+
+rx board setup:
+==============
+./setup_board.sh rx $ST60_DEMO_TAG
+
+**************** One Time Procedure finish *************
+
+*****************Start streaming demo ******************
+Using touchpanel:
+Use Ethernet streaming tx & Ethernet streaming rx apps on touch panel to
+transmit & recive stream using ethernet
+
+or
+
+Using Keyboard:
+tx board start transmitting stream:
+
+watch ./stm32mp1_st60_demo-$ST60_DEMO_TAG/scripts/tx_script.sh
+
+rx board start receiving stream:
+
+./stm32mp1_st60_demo-$ST60_DEMO_TAG/scripts/rx_script.sh
+
+*********************************************************
+
+hardware setup:
+==============
+- Connect both boards via ethernet cable
+- Connect usb micro cable between stlink connector and host machine for
+  console and interact with the board.
+- Host machine : use Tera term (windows) or minicom(linux) to see logs
+  and command entry
+- Tera term/minicom configuration :
+	Speed: 115200,
+	Data : 8 bit,
+	Parity: None,
+	Stop bits: 1,
+	Flow control: None

@@ -1,0 +1,3 @@
+gst-launch-1.0 -vvv udpsrc port=5100 caps="application/x-rtp, framerate=(fraction)100/1, media=(string)video, clock-rate=(int)90000, encoding-name=(string)VP8, payload=(int)96, ssrc=(uint)1551331863, timestamp-offset=(uint)2948607837, seqnum-offset=(uint)21286,  a-framerate=(string)25" ! rtpvp8depay ! avdec_vp8 ! autovideosink
+
+#/usr/local/demo/bin/touch-event-gtk-player --graph "udpsrc port=5100 caps=\"application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)VP8-DRAFT-IETF-01, payload=(int)96, ssrc=(uint)2990747501, clock-base=(uint)275641083, seqnum-base=(uint)34810\" ! rtpvp8depay ! avdec_vp8 ! waylandsink fullscreen=true" 2> /dev/null > /dev/null
