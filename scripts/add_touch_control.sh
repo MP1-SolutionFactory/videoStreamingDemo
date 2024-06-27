@@ -3,6 +3,8 @@ DEMO_APP_PATH="/usr/local/demo/application"
 
 cp -rf add_in_demo_launcher/eth_streaming $DEMO_APP_PATH/ 
 
+chmod +x $DEMO_APP_PATH/eth_streaming/bin/*
+
 rm -f $DEMO_APP_PATH/005-eth_streaming_*.yaml
 : "${BOARD:=tx}"
 
