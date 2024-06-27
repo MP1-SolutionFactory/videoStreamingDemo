@@ -11,6 +11,8 @@ AR_FILE=$2
 wget https://github.com/MP1-SolutionFactory/videoStreamingDemo/archive/refs/tags/$AR_FILE.zip
 unzip -o $AR_FILE
 
+mv /usr/local/demo/pictures/ST4439_ST_logo.png /usr/local/demo/pictures/logo.png          
+
 cd videoStreamingDemo-*$AR_FILE
 
 if [ $BOARD == "rx" ]; then
